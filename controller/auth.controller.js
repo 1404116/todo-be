@@ -17,8 +17,8 @@ authController.authenticate = (req, res, next) => {
             }
             // res.status(200).json({ status: "success", userId: payload._id });
             req.userId = payload._id;
-            next();
         });
+        next();
     } catch (error) {
         res.status(400).json({ status: "fail", message: error.message });
     }
